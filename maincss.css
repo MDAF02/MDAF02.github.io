@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #000;
+}
+
+#clock {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+#date {
+  font-size: 24px;
+  color: #fff;
+}
+
+.wadah{
+      background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0f0;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  transition: background 0.1s;
+}
+
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0,255,200,0.6);
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
